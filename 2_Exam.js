@@ -6,24 +6,18 @@
  * if final score < 0, then 0 else score
  * 
  */
-const getScore = (correctAnswer, studentAnswers) => {
-    
-    // console.log(arrCorrectAns.forEach(function(e){
-    //     if (arrStudentAns.has(e)) {
-    //         arrCorrectAns.add(e)
-    //     }
-    // }))
-
-    // let arrIntersection = arrCorrectAns.filter(function(x) {
-    //     if (arrStudentAns.indexOf(x) != -1) {
-    //         return true
-    //     }
-    //     else {
-    //         return false
-    //     }
-    // });
-    // return arrIntersection
-    // console.log(arrIntersection)
+const getScore = (correctAnswer, studentAnswers) => {   
+    let correctItems = 0
+    const newArr = []
+    for (let i = 0; i < correctAnswer.length; i++) {
+        for (let j = 0; j < studentAnswers.length; j++)
+        if (correctAnswer[i] === studentAnswers[i]) {
+            correctItems+=4
+            newArr.splice(i, 0, correctAnswer[i])
+            break
+        }
+    }
+    console.log(correctItems)
 }
 
 

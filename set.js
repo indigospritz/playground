@@ -91,7 +91,7 @@ setB.add("c");
 setB.add("a");
 setB.add("d");
 console.log(setA.subset(setB));
-// console.log(setA.intersection(setB));
+console.log(setA.intersection(setB));
 console.log(setB.difference(setA).values());
 // setB.remove("d");
 // console.log(setB.values());
