@@ -1,7 +1,7 @@
 
 // Check if array has an element
 
-const arr = ['a', 'b', 'c']
+const arr = ['b', 'a', 'c']
 
 function has (haystack, needle) {
     let found = false

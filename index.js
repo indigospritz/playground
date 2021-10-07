@@ -1,17 +1,6 @@
-
-function greet(name, lastName) {
-    // console.log('Hello '  + name + ' ' + lastName);
-
-}
-
-function square(number){
-    return number * number;
-}
-// console.log(square(3));
-
 var letters = [];
 
-var word = "merem";
+var word = "121";
 
 var rword = "";
 

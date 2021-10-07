@@ -10,11 +10,12 @@ const getScore = (correctAnswer, studentAnswers) => {
     let correctItems = 0
     const newArr = []
     for (let i = 0; i < correctAnswer.length; i++) {
-        for (let j = 0; j < studentAnswers.length; j++)
+        for (let j = 0; j < studentAnswers.length; j++) {
         if (correctAnswer[i] === studentAnswers[i]) {
             correctItems+=4
             newArr.splice(i, 0, correctAnswer[i])
             break
+        }
         }
     }
     console.log(correctItems)
