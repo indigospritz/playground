@@ -8,8 +8,6 @@ const isPalindrome = num => {
     for (let i = 0; i <= firstHalfOfNumArr.length -1; i++) {
         numArr.splice(numArr.length - 1 - i, 1, firstHalfOfNumArr[i])
     }
-
-    
     return numArr
 }
  console.log(isPalindrome(223455))

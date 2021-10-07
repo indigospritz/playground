@@ -8,4 +8,18 @@ const isPalindrome = num => {
     return true
 }
 
-console.log(isPalindrome(101213232))
+const findPalindromicNum = count => {
+    let found = false
+    let foundPalindromicNum
+    while (!found) {
+        if (isPalindrome(count)) {
+            found = true
+            foundPalindromicNum = count
+        } else {
+            count++
+        }
+    }
+    return foundPalindromicNum
+}
+
+console.log(findPalindromicNum(101102))
