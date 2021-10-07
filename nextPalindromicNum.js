@@ -20,9 +20,22 @@ const findNextPalindromicNum = count => {
             count++
         }
     }
+    return nextPalindromicNum
 
+    // let divisor = nextPalindromicNum - 1
+    // let isPrime = false
+    // while (!isPrime)  {
+    //     let tempNum = true
+    //     for (divisor; divisor > 1; divisor--) {
+    //         if (nextPalindromicNum % divisor === 0) {
+    //             tempNum = false
+    //         }
+    //         isPrime = tempNum
+    //     }
+    //     return isPrime
+    // }
     
-    return nextPalindromicNum + msg
+    
 }
 
-console.log(findNextPalindromicNum(1011012))
+console.log(findNextPalindromicNum(10))
