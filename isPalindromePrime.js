@@ -9,12 +9,11 @@ const isPalindrome = num => {
 }
 
 const isPalPrime = num => {
-    if (isPalindrome(num)) {
-        for (let i = 2; i < num; i++) {
-            if (num % i != 0) {
-                return true
-            } else {
-                return false
+    let found = false
+    while (!found) {
+        if (isPalindrome(num)) {
+            for (let i = 2; i < num; i++) {
+                
             }
         }
     }
