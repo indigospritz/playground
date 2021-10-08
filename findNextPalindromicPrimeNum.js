@@ -8,21 +8,26 @@ const isPalindrome = num => {
     return true
 }
 
-const findNextPalindromicNum = count => {
-    let msg = ' is prime'
-    let found = false
-    let nextPalindromicNum
-    while (!found) {
-        if (isPalindrome(count)) {
-            found = true
-            nextPalindromicNum = count
-        } else {
-            count++
-        }
+const isPrime = num => {
+    for (let i = 2; i < num; i++) {
+        if (num % i == 0) return false
+    return true
     }
-
-    
-    return nextPalindromicNum + msg
 }
 
-console.log(findNextPalindromicNum(1011012))
+const nextPalPrimeNum = num => {
+    let found = false
+    let tempNum
+    while (!found) {
+        if (isPalindrome(num) && isPrime(num) === true) {
+            found = true
+            tempNum = num
+        } else {
+            num++
+            tempNum = num
+        }
+    }
+    return num
+}
+
+console.log(nextPalPrimeNum(140))

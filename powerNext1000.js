@@ -25,4 +25,4 @@ function findNextValid(numCount) {
     return validNum
 }
 
-console.log(findNextValid(1000))
+console.log(findNextValid(123))
