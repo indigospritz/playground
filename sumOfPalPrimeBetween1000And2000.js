@@ -1,7 +1,8 @@
+// find  the sum of all palindromic prime num between 1000 and 2000
 const isPalindrome = num => {
     const numArr = Array.from(String(num), Number)
     for (let i = 0; i < numArr.length / 2; i++) {
-        if (numArr[i] !== numArr[numArr.length -1 -i]) {
+        if (numArr[i] !== numArr[numArr.length - 1 - i]) {
             return false
         }
     }
@@ -23,18 +24,20 @@ const isPrime = num => {
     return found
 }
 
-const nextPalPrimeNum = num => {
+const sumOfPalPrime = num => {
     let found = false
-    let validNum
+    let result = 0
     while (!found) {
-        if (isPrime(num) && isPalindrome(num)) {
-            found = true
-            validNum = num
-        } else {
-            num++
+        for (let i = num; i < 20000; i++) {
+            if (isPalindrome(i) && isPrime(i)) {
+                console.log(i)
+                result += i
+                found = true
+            } else {
+                num++
+            }
         }
+        return result
     }
-    return validNum
 }
-
-console.log(nextPalPrimeNum(10502))
+console.log(sumOfPalPrime(1000))

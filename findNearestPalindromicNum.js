@@ -12,6 +12,7 @@ const nextPalindromicNum = count => {
     let found = false
     while (!found) {
         if (isPalindrome(count)) {
+            console.log(count)
             found = true
         } else {
             count++
@@ -20,4 +21,4 @@ const nextPalindromicNum = count => {
     return count
 }
 
-console.log(nextPalindromicNum(142))
+console.log(nextPalindromicNum(1000))

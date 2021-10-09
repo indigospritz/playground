@@ -7,4 +7,4 @@ const isPalindrome = num => {
     }
     return true
 }
-console.log(isPalindrome(121))
+console.log(isPalindrome(12))

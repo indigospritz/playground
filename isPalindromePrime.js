@@ -10,13 +10,17 @@ const isPalindrome = num => {
 
 const isPalPrime = num => {
     let found = false
-    while (!found) {
-        if (isPalindrome(num)) {
-            for (let i = 2; i < num; i++) {
-                
+    if (isPalindrome(num)) {
+        for (let i = 2; i < num; i++) {
+            if (num % i == 0) {
+                found = false
+                break
+            } else {
+                found = true
             }
         }
     }
+    return found
 }
 
-console.log(isPalPrime(142))
+console.log(isPalPrime(181))
