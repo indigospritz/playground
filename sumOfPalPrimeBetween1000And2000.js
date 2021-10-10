@@ -25,19 +25,20 @@ const isPrime = num => {
 }
 
 const sumOfPalPrime = num => {
-    let found = false
+    let found
     let result = 0
-    while (!found) {
-        for (let i = num; i < 20000; i++) {
-            if (isPalindrome(i) && isPrime(i)) {
-                console.log(i)
-                result += i
-                found = true
-            } else {
-                num++
-            }
-        }
-        return result
+    for (let i = num; i < 20000; i++) {
+        if (isPalindrome(i) && isPrime(i)) {
+            console.log(i)
+            result += i
+        } 
     }
+    return result
 }
 console.log(sumOfPalPrime(1000))
+
+// x2 * y2 == z2
+
+// 4 + 4 = 4
+// 9 + 9 == 9
+asdasdasd
