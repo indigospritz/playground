@@ -10,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "nodemon": "^2.0.13"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
   }
 }
