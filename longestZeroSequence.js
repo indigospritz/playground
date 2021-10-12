@@ -18,6 +18,25 @@ const longestZeroSeq = arr => {
     return tempArr
 }
 
+const longestZeroSeq2 = arr => {
+    let count = 0
+    let result = 0
+    let tempArr = []
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] != 0) {
+            count = 0
+        } else {
+            count++
+            result = Math.max(result, count)
+        }
+    }
+    for (let i = 0; i < result; i++) {
+        tempArr.push(0)
+    }
+    return tempArr   
+    
+}
+console.log(longestZeroSeq2(series))
 console.log(longestZeroSeq(series))
 console.log(series)
 
