@@ -4,4 +4,4 @@ const isPrime = num => {
     return num > 1;
 }
 
-console.log(isPrime(10601))
+console.log(isPrime(953))

@@ -1,3 +1,19 @@
 https://www.ardendertat.com/2011/12/01/programming-interview-questions-19-find-next-palindrome-number/
 https://afteracademy.com/blog/find-the-closest-palindrome
 https://www.simplilearn.com/coding-interview-questions-article
+anagrams /
+calculate vowels and consonants in a string
+get matching elements in an integer array
+bubble sort
+insertion
+reversing array
+swap two numbers without using 3rd variable
+fibo series using recursion
+factorial of integer
+reverse lindked list
+binary search
+second largest number in array
+remove all occurence of a given character from the input string
+inheritance
+overloading and overriding
+sum all elements in an array
