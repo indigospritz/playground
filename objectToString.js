@@ -9,6 +9,7 @@ const data = {
     }
   }
 }
+console.log(Object.keys);
 
 
 const objectKeys = obj => {
@@ -41,3 +42,5 @@ const objectKeys2 = obj => {
   return Object.keys(obj).filter(key => obj[key] instanceof Object).map(key => objectKeys2(obj[key]).map(k => `${key}.${k}`)).reduce((x, y) => x.concat(y), Object.keys(obj))
 }
 console.log(objectKeys2(data))
+
+// console.log(objectKeys(data));
