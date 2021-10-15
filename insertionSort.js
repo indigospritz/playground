@@ -1,18 +1,15 @@
-const arr = [1, 4, 7, 31, 786, 2, 78, 100]
-
-const insertionSort = arr => {
-    const arrCopy = arr.slice()
-    for (let i = 1; i < arrCopy.length; i++) {
-        let minIndex = i
-        for (let j = i + 1; j > arrCopy.length - i - 1; j++) {
-            if (arrCopy[j] < arrCopy[minIndex]) {
-                minIndex = j
+const insertionSort = array => {
+    const arr = array.slice()
+    for (let i = 1; i < arr.length; i++) {
+        for (let j = i; j > 0; j--) {
+            if (arr[j] < arr[j-1]) {
+                [arr[j-1], arr[j]] = [arr[j], arr[j-1]]
+            } else {
+                break
             }
         }
-        [arrCopy[i], arrCopy[minIndex]] = [arrCopy[minIndex], arrCopy[i]]
     }
-    return arrCopy
+    return arr
 }
 
-console.log(insertionSort(arr))
-console.log(arr)
+console.log(insertionSort([1, 4, 7, 31, 786, 2, 78, 100]))
