@@ -1,4 +1,4 @@
-// largest palindrome product
+// problem 4
 const isPalindrome = num => {
     const numArr = Array.from(String(num), Number)
     for (let i = 0; i < numArr.length - 1 / 2; i++) {
