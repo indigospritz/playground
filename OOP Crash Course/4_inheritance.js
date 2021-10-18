@@ -26,5 +26,4 @@ const mag1 = new Magazine('Mag one', 'John Doe', '2018', 'Jan')
 // use Magazine constructor
 Magazine.prototype.constructor = Magazine
 
-
 console.log(mag1)

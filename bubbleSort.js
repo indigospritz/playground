@@ -1,16 +1,12 @@
-const arr = [1, 4, 6, 2, 3]
-
 const bubbleSort = arr => {
-    const arrCopy = arr.slice()
-    for (let i = 0; i < arrCopy.length-1; i++) {
-        for (let j = 1; j < arrCopy.length-i-1; j++) {
-            if (arrCopy[j] > arrCopy[j+1]) {
-                [arrCopy[j], arrCopy[j+1]] = [arrCopy[j+1], arrCopy[j]]
+    for (let i = 0; i < arr.length-1; i++) {
+        for (let j = 1; j < arr.length-i; j++) {
+            if (arr[j-1] > arr[j]) {
+                [arr[j-1], arr[j]] = [arr[j], arr[j-1]]
             }
         }
     }
-    return arrCopy
+    return arr
 }
 
-console.log(bubbleSort(arr))
-console.log(arr)
+console.log(bubbleSort([2, 3, 1, 12, 24, 1, 4, 8]))
