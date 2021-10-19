@@ -77,20 +77,28 @@
 // end = performance.now()
 // end - start
 const findSumNumbers = (sum, arr) => {
-    const temp = arr.slice()
-    let res = 0
-    let resArr = []
-    for (let i = 0; i < temp.length; i++) {
-        res += temp[i]
-        if (res + temp[i] < sum) {
-            resArr.push(temp[i])
+    const tempArr = arr.slice()
+    let tempSum = 0
+    let tempFactor = []
+    let checkSum = tempArr.filter(x => x < sum)
+    for (let i = checkSum.length-1; i >= 0; i--) {
+        tempSum += checkSum[i]
+        if (tempSum < sum) {
+            tempFactor.push(checkSum[i])
+        } else if (tempSum == sum) {
+            tempFactor.push(checkSum[i])
+            break
+        } else if (tempSum > sum) {
+            tempFactor.push(checkSum[i-1])
+            break
         }
     }
-    console.log(resArr)
+    console.log(tempFactor.reverse())
+    
 }
 
 const numbers = [1, 2, 3]
-findSumNumbers(5, numbers)
+findSumNumbers(6, numbers)
 // findSumNumbers(2, numbers)
 // findSumNumbers(3, numbers)
 // findSumNumbers(4, numbers)

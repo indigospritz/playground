@@ -1,4 +1,4 @@
-// problem 2
+// even fibonacci
 const findFibo = () => {
     let sumOfEvenFibo = 0
     let n1 = 1

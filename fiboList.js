@@ -15,29 +15,28 @@
 // }
 // listfibo(30)
 
-const fibonacci = num => {
-    const res = [0, 1]
-    for (let i = 2; i <= num; i++) {
-        const prevNum1 = res[i - 1]
-        const prevNum2 = res[i - 2]
-        res.push(prevNum1 + prevNum2)
-    }
-    
-    console.log(res[num])
+// max nth term 1476
+
+const fib = (n, memo = {}) => {
+    if (n in memo) return memo[n]
+    if (n <= 2) return 1
+
+    memo[n] = fib(n - 1, memo) + fib(n - 2, memo)
+    return memo[n]
 }
-fibonacci(10)
+ console.log(fib(6))
 
 // nth term
-// const fibonacci = nthTerm => {
-//     let n1 = 0
-//     let n2 = 1
-//     let res = 0
-//     for (let i = 2; i <= nthTerm; i++) {
-//         res = n1 + n2
-//         n1 = n2
-//         n2 = res
-//     }
-//     return res
-// }
+const fibonacci = nthTerm => {
+    let n1 = 0
+    let n2 = 1
+    let res = 0
+    for (let i = 2; i <= nthTerm; i++) {
+        res = n1 + n2
+        n1 = n2
+        n2 = res
+    }
+    return res
+}
 
-// console.log(fibonacci(10))
+console.log(fibonacci(1476))

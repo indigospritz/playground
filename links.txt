@@ -1,6 +1,9 @@
 https://www.ardendertat.com/2011/12/01/programming-interview-questions-19-find-next-palindrome-number/
 https://afteracademy.com/blog/find-the-closest-palindrome
 https://www.simplilearn.com/coding-interview-questions-article
+
+https://learnersbucket.com/examples/algorithms/program-to-find-the-nth-fibonacci-number/
+
 anagrams /
 calculate vowels and consonants in a string
 get matching elements in an integer array
