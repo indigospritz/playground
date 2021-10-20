@@ -1,7 +1,12 @@
 // power digit sum
 const powerDigitSum = (base, power) => {
-    const num = base**power
-    return BigInt(num).toString().split('').reduce((prev, curr) => prev + curr, 0)
+    const num = Array.from((String(BigInt(base**power), Number)))
+    let sum = 0
+    for (let i = 0; i <= num.length-1; i++) {
+        sum += parseInt(num[i])
+    }
+    return sum
+    
 }
 
 console.log(powerDigitSum(2, 1000))

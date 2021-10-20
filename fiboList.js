@@ -24,7 +24,7 @@ const fib = (n, memo = {}) => {
     memo[n] = fib(n - 1, memo) + fib(n - 2, memo)
     return memo[n]
 }
- console.log(fib(6))
+ console.log(fib(8))
 
 // nth term
 const fibonacci = nthTerm => {
@@ -39,4 +39,4 @@ const fibonacci = nthTerm => {
     return res
 }
 
-console.log(fibonacci(1476))
+console.log(fibonacci())
