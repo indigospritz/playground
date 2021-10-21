@@ -76,31 +76,50 @@
 // factorial(5)
 // end = performance.now()
 // end - start
-const findSumNumbers = (sum, arr) => {
-    const tempArr = arr.slice()
-    let tempSum = 0
-    let tempFactor = []
-    let checkSum = tempArr.filter(x => x < sum)
-    for (let i = checkSum.length-1; i >= 0; i--) {
-        tempSum += checkSum[i]
-        if (tempSum < sum) {
-            tempFactor.push(checkSum[i])
-        } else if (tempSum == sum) {
-            tempFactor.push(checkSum[i])
-            break
-        } else if (tempSum > sum) {
-            tempFactor.push(checkSum[i-1])
-            break
-        }
-    }
-    console.log(tempFactor.reverse())
+// const findSumNumbers = (sum, arr) => {
+//     const tempArr = arr.slice()
+//     let tempSum = 0
+//     let tempFactor = []
+//     let checkSum = tempArr.filter(x => x < sum)
+//     for (let i = checkSum.length-1; i >= 0; i--) {
+//         tempSum += checkSum[i]
+//         if (tempSum < sum) {
+//             tempFactor.push(checkSum[i])
+//         } else if (tempSum == sum) {
+//             tempFactor.push(checkSum[i])
+//             break
+//         } else if (tempSum > sum) {
+//             tempFactor.push(checkSum[i-1])
+//             break
+//         }
+//     }
+//     console.log(tempFactor.reverse())
     
-}
+// }
 
-const numbers = [1, 2, 3]
-findSumNumbers(6, numbers)
+// const numbers = [1, 2, 3]
+// findSumNumbers(6, numbers)
 // findSumNumbers(2, numbers)
 // findSumNumbers(3, numbers)
 // findSumNumbers(4, numbers)
 // findSumNumbers(5, numbers)
 // findSumNumbers(6, numbers)
+
+
+// const multiplicationTable = n => {
+//     if (n < 1 && n <= 20) {
+//         return
+//     }
+//     for (let i = 1; i <= 10; i++) {
+//         console.log(`${n} x ${i} = ${n*i}`);
+//     }
+// }
+// multiplicationTable(7)
+
+const main = n => {
+    const arr = Array.from(String(n), Number).reverse()
+
+    return parseInt(arr.join(''))
+}
+
+console.log(main(1234))
