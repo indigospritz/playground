@@ -25,7 +25,6 @@ const isPrime = num => {
 }
 
 const sumOfPalPrime = num => {
-    let found
     let result = 0
     for (let i = num; i < 20000; i++) {
         if (isPalindrome(i) && isPrime(i)) {

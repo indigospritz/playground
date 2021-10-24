@@ -44,13 +44,18 @@ const data = [
   }
 ]
 
+for (let entry of data) {
+  if (entry) {
+    entry.children = []
+    
+  }
+}
 const userRef = []
-const userSubRef = []
 const userFromDataRef = userData => {
-  for (let user of userData) {
-    const refId = user.referral_id
-    if (refId) {
-      userRef.push(user.referral_id)
+  for (let entry of userData) {
+    const refId = entry.referral_id
+    if (refId in entry.children) {
+      userRef.push(entry)
     }
   }
   return userRef

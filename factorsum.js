@@ -6,10 +6,13 @@ const factorSum = (sum, arr) => {
     let check = tempArr[i] - sum
     if (check == 0) {
       res.push(tempArr[i])
+    } else {
+      res.push(tempArr[i + 1])
     }
+    
   }
   console.log(res)
 }
 
-const number = [1,2,3]
-factorSum(4, number)
+const number = [1,2,3, 4, 5]
+factorSum(5, number)
