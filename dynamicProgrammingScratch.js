@@ -6,7 +6,7 @@
 
 const frequencySort = s => {
     
-    return s.split('').sort((a, b) => a - b).reverse().join('')
+    return s. .split('').sort((a, b) => a - b).reverse().join('')
 }
 
 console.log(frequencySort('tree'))

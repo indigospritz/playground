@@ -92,23 +92,34 @@
 //         count_array = count.split(",");
 //     for(var i=0; i<count_array.length;i++) count_array[i] = count_array[i];
 //     return (count_array[0]+count_array[1]+count_array[2]+count_array[3]);
-const pandigitalNum = 1406357289
+// const pandigitalNum = 1406357289
 
-const getSum = () => {
-    let tempNum = ''
-    let counter = 9
-    let limit = 9
-    let sum = 0
-    const dNum = Array.from(String(pandigitalNum), Number)
-    for (let i = 0; i < dNum.length; i++) {
-        for (let j = i; j <= 1; j++){
-            tempNum += dNum.splice(0, 1)
-            sum += tempNum
-        }
-        limit++
-    }
-    console.log(parseInt(sum))
+// const getSum = () => {
+//     let tempNum = ''
+//     let counter = 9
+//     let limit = 9
+//     let sum = 0
+//     const dNum = Array.from(String(pandigitalNum), Number)
+//     for (let i = 0; i < dNum.length; i++) {
+//         for (let j = i; j <= 1; j++){
+//             tempNum += dNum.splice(0, 1)
+//             sum += tempNum
+//         }
+//         limit++
+//     }
+//     console.log(parseInt(sum))
+// }
+
+// getSum()
+// console.log(pandigitalNum)
+
+function Person (name,age, gender, runner) {
+    this.name = name
+    this.age = age
+    this.gender = gender
+    this.runner = runner
 }
 
-getSum()
-// console.log(pandigitalNum)
+const stud1 = new Person('todd', 31, 'male', true)
+const stud2 = new Person('carly', 21, 'female', false)
+console.log(stud1, stud2);

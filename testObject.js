@@ -41,24 +41,32 @@ const data = [
     login_name: '666',
     referral_path: '2,22',
     referral_id: 22
-  }
+  },
 ]
 
-for (let entry of data) {
-  if (entry) {
-    entry.children = []
-    
-  }
-}
-const userRef = []
-const userFromDataRef = userData => {
+const obj = userData => {
   for (let entry of userData) {
-    const refId = entry.referral_id
-    if (refId in entry.children) {
-      userRef.push(entry)
+    if (entry) {
+      entry.children = []
     }
   }
-  return userRef
+
+  const temp = Object.values(userData)
+  console.log(temp[1]);
+  temp[0].children.push(temp[1])   
+  // for (let i = 1; i < temp.length; i++) {
+  //   const tempKey = temp[i]
+  //  if (tempKey.referral_id[i] == tempKey.id[i-1]) {
+  //   temp[i-1].children.push(temp[i].id)
+  //  }
+  // }
+  return temp
 }
 
-console.log(userFromDataRef(data))
+console.log(obj(data))
+
+
+
+// console.log(userFromDataRef(data))
+
+  
