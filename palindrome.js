@@ -20,3 +20,11 @@ const palindrome = word => {
 }
 console.log(palindrome('0_0 (: /-\ :) 0–0'))
 console.log(palindrome('A man, a plan, a canal. Panama'))
+
+// function palindrome(str) {
+//     var re = /[\W_]/g;
+//     var lowRegStr = str.toLowerCase().replace(re, '');
+//     var reverseStr = lowRegStr.split('').reverse().join(''); 
+//     return reverseStr === lowRegStr;
+//   }
+//   console.log(palindrome("A man, a plan, a canal. Panama")) 

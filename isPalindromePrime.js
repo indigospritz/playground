@@ -23,4 +23,4 @@ const isPalPrime = num => {
     return found
 }
 
-console.log(isPalPrime(101))
+console.log(isPalPrime(1991))

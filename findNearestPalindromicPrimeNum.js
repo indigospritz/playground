@@ -9,32 +9,25 @@ const isPalindrome = num => {
 }
 
 const isPrime = num => {
-    let found = false
-    if (isPalindrome(num)) {
-        for (let i = 2; i < num; i++) {
-            if (num % i == 0) {
-                found = false
-                break
-            } else {
-                found = true
-            }
-        }
+    for (let i = 2; i < num; i++) {
+        if (num % i == 0) return false
+    return true
     }
-    return found
 }
 
 const nextPalPrimeNum = num => {
     let found = false
-    let validNum
+    let tempNum
     while (!found) {
-        if (isPrime(num) && isPalindrome(num)) {
+        if (isPalindrome(num) && isPrime(num) === true) {
             found = true
-            validNum = num
+            tempNum = num
         } else {
             num++
+            tempNum = num
         }
     }
-    return validNum
+    return num
 }
 
-console.log(nextPalPrimeNum(1991))
+console.log(nextPalPrimeNum(140))
