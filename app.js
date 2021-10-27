@@ -116,10 +116,51 @@
 // }
 // multiplicationTable(7)
 
-const main = n => {
-    const arr = Array.from(String(n), Number).reverse()
+// const main = n => {
+//     const arr = Array.from(String(n), Number).reverse()
 
-    return parseInt(arr.join(''))
-}
+//     return parseInt(arr.join(''))
+// }
 
-console.log(main(1234))
+// console.log(main(1234))
+
+// const ElementList = {}
+// const addElement = (ElementList, element ) => {
+//     let newList = Object.assign(ElementList, element)
+//     return newList
+// }
+// console.log(ElementList);
+
+const x = [13, 'but', 'i', 'wont', 'hesitate', 'no', 'more', 'no', 'more', 'it', 'cannot', 'wait', 'im', 'yours']
+const sorted = x.sort((a, b) => a.length - b.length).toString().replace(/[\W0-9]/g, ' ')
+const sortedWithReg = sorted.split('')
+console.log(sorted);
+
+// x.sort((a, b) => {
+//     let xLength = a.length
+//     let yLength = b.length
+//     if (xLength === yLength) {
+//         return a > b ? 1: -1
+//     }
+//     return xLength - yLength
+// }).filter((str) => typeof str === 'String')
+
+// const naturalNum = num => {
+//     let remainder = new Set()
+//     for (let i = 0; i < num.length; i++){
+//         remainder.add(num[i]%42)
+//     }
+//     const result = [ ...remainder]
+//     return result.length
+// }
+// const x = [42, 84, 252, 420, 840, 126, 42, 84, 420, 126]
+// const y = [39, 40, 41, 42, 43, 44, 82, 83, 84, 85]
+// console.log(naturalNum(x))
+// console.log(naturalNum(y))
+// const naturalNum = num => {
+//     const remainders = new Set(num.map(x => x % 42))
+//     return Array.from(remainders).length
+//   }
+//   const x1 = [42, 84, 252, 420, 840, 126, 42, 84, 420, 126]
+//   console.log(naturalNum(x1))
+// console.log(naturalNum(y))

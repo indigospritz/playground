@@ -18,5 +18,12 @@ const bestSum = (targetSum, numbers, memo = {}) => {
   memo[targetSum] = shortestCombination
   return shortestCombination
 }
+
+// const num = [1, 2, 4, 8, 16, 32, 64, 128]
+// console.log(num.reduce(function(a, b) {
+//   return a + b
+// }));
+
+console.log(bestSum(125, [1, 2, 4, 8, 16, 32, 64, 128]))
 console.log(bestSum(7, [5, 3, 4, 7]))
 console.log(bestSum(127, [1, 2, 5, 25]))

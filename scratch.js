@@ -163,3 +163,27 @@ const totalYears = companies.reduce(function(total, company){
     return total + (company.end - company.start)
 }, 0)
 console.log(totalYears);
+
+
+const phoneBook = contacts => {
+    const contactsArr = contacts.split('\n')
+    const n = parseInt(contactsArr[0])
+    const phoneBookArr = contactsArr.slice(1, n + 1)
+    const queries = contactsArr.slice(n + 1)
+    let phoneBookObj = {}
+    for (let i = 0; i < phoneBookArr.length; i++) {
+        const currVal = phoneBookArr[i]
+        const [key, value] = currVal.split(' ')
+        phoneBookObj[key] = value
+    }
+
+    for (let i = 0; i < queries.length; i++) {
+        const queryVal = queries[i]
+        if (phoneBookObj[queryVal]) {
+            console.log(`${queryVal}=${phoneBookObj[queryVal]}`)
+        } else {
+            console.log('Not found')
+        }
+    }
+}
+console.log(phoneBook('3 sam 99912222 tom 11122222 tom 11122222 harry 12299933 sam edward harry'))
