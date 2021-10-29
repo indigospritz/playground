@@ -1,0 +1,7 @@
+SELECT * FROM actor WHERE 
+	actor_id > 1 AND
+    mod(actor_id, 2) != 0 AND
+    mod(actor_id, 3) != 0 OR
+    actor_id = 2 OR
+    actor_id = 3
+    ORDER BY actor_id;
