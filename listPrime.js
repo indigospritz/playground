@@ -9,7 +9,8 @@ const listPrime = range => {
       }
     }
     if (flag) {
-      console.log(i + '\n') 
+      console.log(i) 
+      
     }
   }
   
