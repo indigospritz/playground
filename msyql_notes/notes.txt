@@ -1,0 +1,18 @@
+REGEXP
+
+ -- anywhere '' --
+'field'
+
+ -- beginning ^ (caret) --
+'^field'
+
+ -- end $ --
+'field$'
+
+ -- anywhere with or | (vertical bar or pipe) --
+'field|mac|rose'
+
+-- any char between [] ff. e --
+'[gim]e' or
+'e[gim]' or
+'[a-h]e'
