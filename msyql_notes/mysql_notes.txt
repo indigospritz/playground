@@ -1,0 +1,16 @@
+-- foreign keys --
+
+	- only refer to primary key of the referring table
+	- both column should have the same constraint, datatype
+	- the size of datatype of both column doesnt have to be the same
+		e.g a column with varchar(10) can refer to column with varchar(50) and vice versa
+	- the 2nd table should refer to the primary key of the 1st table
+
+-- primary keys --
+
+	- primary key attribute also includes not null attrib
+	- dont forget to use unsigned for non-negative number
+
+-- procedure --
+
+	- naming convention in procedure is not case sensitive, so use different name when creating 		procedure with in, out, or inout parameters init
