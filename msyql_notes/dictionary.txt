@@ -1,0 +1,10 @@
+cumbersome - difficult to use or handle with because of weight or bulk
+
+bottleneck (dbms) - limiting factor/ constraint (size/capacity)
+
+different case styles  (user login count)
+ - camel	(userLoginCount) 	variable
+ - pascal	(UserLoginCount)	class
+ - snake	(USER_LOGIN_COUNT)	database field names
+ - kebab	(user-login-count)	url
+

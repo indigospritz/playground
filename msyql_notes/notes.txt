@@ -1,3 +1,12 @@
+ALTER 	- is data definition language command (DDL)
+	- performs on structure level
+	- used to add, delete, modify the attributes of the relations/tables in the database
+
+UPDATE 	- is a data manipulation command (DML)
+	- performs on the data level
+	- is used to updated existing records in the database	
+
+
 REGEXP
 
  -- anywhere '' --
@@ -16,3 +25,92 @@ REGEXP
 '[gim]e' or
 'e[gim]' or
 '[a-h]e'
+
+
+-- exact match case sensitive
+select first_name from customer s
+where first_name like binary 'LG';
+
+
+
+Dev@0611@Cubic!@#$
+
+-- Problem 2 Using PARTITION BY
+SELECT DISTINCT
+	date(created_at),
+	SUM(amount) OVER(PARTITION BY date(created_at)),
+	AVG(amount) OVER(PARTITION BY date(created_at))
+FROM users_transaction;
+
+
+-- Problem 2 Using ORDER BY
+SELECT DISTINCT
+	date(created_at),
+	SUM(amount) OVER(ORDER BY date(created_at)),
+	AVG(amount) OVER(ORDER BY date(created_at))
+FROM users_transaction;
+
+
+SELECT
+	id,
+	price,
+    price::numeric / SUM(price) OVER (PARTITION BY journey_id) AS ratio
+FROM TICKET
+
+
+-- truncate --
+SELECT 
+	(SELECT id FROM users_transaction group by id limit 1),
+	date(created_at),
+	TRUNCATE(SUM(amount),0),
+    TRUNCATE(AVG(amount),0)
+FROM users_transaction
+WHERE type_id IN 
+	(SELECT type_id FROM users_transaction
+		WHERE type_id > 7)
+GROUP BY date(created_at);
+
+
+-- trim --
+-- more like add --
+-- removes trailing zeros as well in floating/double number
+SELECT TRIM(amount)+0 FROM users_transaction;
+
+
+
+try to use UNION in joining multiple tables that share common search condition. this optimizes the query and improves efficiency/fetch duration
+
+`bottleneck` - limiting factor
+
+range operator (=, <=>, in(), is null)
+comparision operators (>, <, >=, <=, between, != or <>, LIKE)
+
+
+
+-- CREATE TRIGGER --
+USE sql_store;
+
+DELIMITER $$
+
+CREATE TRIGGER demo_trigger BEFORE INSERT ON customers
+FOR EACH ROW
+BEGIN
+	DECLARE errorMessage VARCHAR(255);
+	SET errorMessage = 'INSERT IS NOT ALLOWED. APPROVAL REQUIRED';
+IF (NEW.customer_id > last_insert_id()
+THEN 
+SIGNAL SQLSTATE '45000'
+	SET MESSAGE_TEXT = errorMessage;
+END IF;
+END $$
+
+-- create trigger --
+use sql-store;
+
+
+
+
+
+
+
+https://learnsql.com/course/postgresql-window-functions/over-partition-by/partition-by/over-partition-by-practice-3

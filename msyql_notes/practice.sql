@@ -132,6 +132,7 @@ WHERE order_id = 2
 ORDER BY total_price DESC;
 
 
+SELECT * FROM customers;
 
 SELECT *
 FROM customers
